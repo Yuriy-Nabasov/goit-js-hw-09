@@ -4,6 +4,9 @@
   | default @import url()
   |============================
 */
+
+@import 'simplelightbox/dist/simple-lightbox.min.css';
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -87,7 +90,8 @@
   padding: 8px 16px;
   /* background-color: transparent; */
   background: #4e75ff;
-  border: 1px solid #303030;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   cursor: pointer;
   align-self: flex-start;
@@ -97,5 +101,5 @@
 .feedback-form-submit:hover,
 .feedback-form-submit:focus {
   transform: scale(1.05);
-  background: #4e75ff;
+  background: #6c8cff;
 }

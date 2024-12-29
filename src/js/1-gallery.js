@@ -1,9 +1,8 @@
 `use strict`; // Код у суворому режимі
 
-// console.log(`Gallery`);
-
+// Підключаємо бібліотеку simplelightbox
 import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+// import 'simplelightbox/dist/simple-lightbox.min.css';  // Стилі simplelightbox підключив через імпорт в styles.css
 
 const images = [
   {
@@ -71,7 +70,7 @@ const images = [
   },
 ];
 
-//! 3 - Розмітка елементів галереї
+//! Розмітка елементів галереї
 // В атрибуті src тега <img> вказуємо посилання на маленьку версію зображення.
 // Для атрибута alt використовуємо опис зображення.
 // Посилання на велике зображення повинно зберігатися в data-атрибуті source на елементі <img>,
@@ -92,11 +91,12 @@ const createImageCardTemplate = card => `
 
 const imageCardTemplate = images.map(createImageCardTemplate).join(``);
 
-//! 3.1 - Додавання розмітки в html файл за одну операцію
+//! Додавання розмітки в html файл за одну операцію
 
 const imageListEl = document.querySelector(`.js-gallery`);
 imageListEl.innerHTML = imageCardTemplate;
 
+// Використовуємо бібліотеку simplelightbox
 const lightbox = new SimpleLightbox('.gallery a', {
   captions: true, // Включити підписи
   captionsData: 'alt', // Джерело підпису: атрибут alt
