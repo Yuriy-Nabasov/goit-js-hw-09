@@ -47,6 +47,7 @@ const onFeedbackFormSubmit = event => {
   }
 
   console.log(formData);
+  formData = { email: '', message: '' }; // Очищуємо об'єкт
   formEl.reset(); // Очищення полів форми
   localStorage.removeItem(`feedback-form-state`); // Видалення даних з локального сховища
 };
